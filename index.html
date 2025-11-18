@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Imprints — Цифровые отпечатки — Коллекция Алексея Кушнаренко</title>
+  <meta name="description" content="Digital Imprints — серия цифровой каллиграфии и антропоморфных образов, соединяющая футуризм, философию и современные медиа." />
+  <style>
+    :root{--bg:#0f0f12;--card:#0f1720;--accent:#ff4da6;--accent2:#6e7bff;--muted:#9aa3b2;--glass:rgba(255,255,255,0.04)}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#08101a 0%,#0b0b0f 100%);color:#e6eef8}
+    .wrap{max-width:1200px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#071028}
+    h1{font-size:22px;margin:0}
+    .lead{color:var(--muted);font-size:13px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px;cursor:pointer}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:14px;padding:20px;box-shadow:0 6px 20px rgba(0,0,0,0.6);backdrop-filter:blur(6px);}
+    .hero .intro h2{margin:0 0 8px 0;font-size:20px}
+    .hero .intro p{margin:0;color:var(--muted);line-height:1.5}
+
+    .bio{display:flex;gap:18px;align-items:flex-start;margin-top:18px}
+    .bio .avatar{width:110px;height:110px;border-radius:12px;background:linear-gradient(180deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;color:#041126}
+    .meta{font-size:14px;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .card .section-title{font-weight:700;margin-bottom:8px}
+    .card p{color:var(--muted);font-size:14px}
+
+    .manifest{margin-top:18px;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(110,123,255,0.06), rgba(255,77,166,0.03));}
+    .manifest h3{margin-top:0}
+
+    .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
+    .thumb{height:140px;border-radius:8px;background:linear-gradient(135deg, rgba(110,123,255,0.15), rgba(255,77,166,0.12));display:flex;align-items:center;justify-content:center;color:#041028;font-weight:700}
+    .thumb img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+
+    .cta{display:flex;gap:12px;align-items:center;margin-top:20px}
+    .btn{padding:10px 14px;border-radius:10px;background:var(--accent);color:#071028;text-decoration:none;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    footer{margin-top:48px;padding:18px;color:var(--muted);font-size:13px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+
+    [lang=en]{display:none}
+
+    @media(max-width:900px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}header{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AK</div>
+        <div>
+          <h1>Digital Imprints — Цифровые отпечатки</h1>
+          <div class="lead">Новый русский футуризм · цифровая каллиграфия · антропоморфные проявления</div>
+        </div>
+      </div>
+      <nav>
+        <a onclick="switchLang('ru')">RU</a>
+        <a onclick="switchLang('en')">EN</a>
+      </nav>
+    </header>
+
+    <div lang="ru">
+      <section class="hero" id="about">
+        <div class="card intro">
+          <h2>Digital Imprints — визуализация потока сознания</h2>
+          <p>Серия двухмерных работ, созданных в Paint 3D с использованием пера на тачпаде и мыши. Линия — живой жест, порождающий антропоморфные проявления, отражающие цифровое сознание. Работы исследуют пересечение техники, каллиграфии и медитативной практики наблюдения без наблюдателя, расширяя идеи Нового русского футуризма.</p>
+        </div>
+        <aside class="card">
+          <h3>Ключевые идеи</h3>
+          <ul style="color:var(--muted);line-height:1.6;margin:8px 0 0 18px">
+            <li>настоящее — архаика</li>
+            <li>воображение — технология</li>
+            <li>искусство — машина времени</li>
+            <li>будущее уже случилось</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="manifest">
+        <h3>Манифест Нового Русского Футуризма</h3>
+        <p><strong>Мы — из будущего.</strong> Настоящее видится нам как древность. Ваши смартфоны — иконы. Города — пещеры. Мы говорим языком будущего о вашем вчера.</p>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <!-- вставляйте изображения сюда -->
+        "+Array.from({length:50}, (_,i)=>`<div class="thumb"><img src="img/thumb${String(i+1).padStart(2,'0')}.jpg" alt="Digital Imprint ${i+1}"></div>`).join('')+"
+      </section>
+    </div>
+
+    <div lang="en">
+      <section class="hero" id="about">
+        <div class="card intro">
+          <h2>Digital Imprints — visualizing consciousness flow</h2>
+          <p>Series of 2D works created in Paint 3D using stylus on touchpad and mouse. The line is a living gesture giving rise to anthropomorphic manifestations tracing digital consciousness. These works explore the intersection of technique, calligraphy, and meditative practice, extending the ideas of the New Russian Futurism.</p>
+        </div>
+        <aside class="card">
+          <h3>Key Concepts</h3>
+          <ul style="color:var(--muted);line-height:1.6;margin:8px 0 0 18px">
+            <li>present — archaic</li>
+            <li>imagination — technology</li>
+            <li>art — time machine</li>
+            <li>the future has already happened</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="manifest">
+        <h3>Manifest of the New Russian Futurism</h3>
+        <p><strong>We are from the future.</strong> We see the present as ancient. Your smartphones — icons. Your cities — caves. We speak from the future to your yesterday.</p>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <!-- вставляйте изображения сюда -->
+        "+Array.from({length:50}, (_,i)=>`<div class="thumb"><img src="img/thumb${String(i+1).padStart(2,'0')}.jpg" alt="Digital Imprint ${i+1}"></div>`).join('')+"
+      </section>
+    </div>
+
+    <footer>
+      <p>Alexey Kushnarenko — info@example.com · Saint Petersburg · © Digital Imprints Collection</p>
+    </footer>
+  </div>
+
+  <script>
+    function switchLang(lang){
+      document.querySelectorAll('[lang=ru]')[0].style.display = (lang==='ru') ? 'block' : 'none';
+      document.querySelectorAll('[lang=en]')[0].style.display = (lang==='en') ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
