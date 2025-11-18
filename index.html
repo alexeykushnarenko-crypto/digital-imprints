@@ -1,135 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Digital Imprints — Цифровые отпечатки — Коллекция Алексея Кушнаренко</title>
-  <meta name="description" content="Digital Imprints — серия цифровой каллиграфии и антропоморфных образов, соединяющая футуризм, философию и современные медиа." />
-  <style>
-    :root{--bg:#0f0f12;--card:#0f1720;--accent:#ff4da6;--accent2:#6e7bff;--muted:#9aa3b2;--glass:rgba(255,255,255,0.04)}
-    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#08101a 0%,#0b0b0f 100%);color:#e6eef8}
-    .wrap{max-width:1200px;margin:40px auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#071028}
-    h1{font-size:22px;margin:0}
-    .lead{color:var(--muted);font-size:13px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px;cursor:pointer}
-
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:14px;padding:20px;box-shadow:0 6px 20px rgba(0,0,0,0.6);backdrop-filter:blur(6px);}
-    .hero .intro h2{margin:0 0 8px 0;font-size:20px}
-    .hero .intro p{margin:0;color:var(--muted);line-height:1.5}
-
-    .bio{display:flex;gap:18px;align-items:flex-start;margin-top:18px}
-    .bio .avatar{width:110px;height:110px;border-radius:12px;background:linear-gradient(180deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;color:#041126}
-    .meta{font-size:14px;color:var(--muted)}
-
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-    .card .section-title{font-weight:700;margin-bottom:8px}
-    .card p{color:var(--muted);font-size:14px}
-
-    .manifest{margin-top:18px;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(110,123,255,0.06), rgba(255,77,166,0.03));}
-    .manifest h3{margin-top:0}
-
-    .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
-    .thumb{height:140px;border-radius:8px;background:linear-gradient(135deg, rgba(110,123,255,0.15), rgba(255,77,166,0.12));display:flex;align-items:center;justify-content:center;color:#041028;font-weight:700}
-    .thumb img{width:100%;height:100%;object-fit:cover;border-radius:8px}
-
-    .cta{display:flex;gap:12px;align-items:center;margin-top:20px}
-    .btn{padding:10px 14px;border-radius:10px;background:var(--accent);color:#071028;text-decoration:none;font-weight:600}
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-
-    footer{margin-top:48px;padding:18px;color:var(--muted);font-size:13px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
-
-    [lang=en]{display:none}
-
-    @media(max-width:900px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:520px){.grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}header{flex-direction:column;align-items:flex-start}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Imprints — Алексей Кушнаренко</title>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin:0; padding:0; background:#0b0b0b; color:#f0f0f0; }
+    header { padding:2rem; text-align:center; background:#111; }
+    header h1 { margin:0; font-size:2.5rem; }
+    nav { margin-top:1rem; }
+    nav button { margin:0 0.5rem; padding:0.5rem 1rem; cursor:pointer; background:#222; color:#fff; border:none; border-radius:4px; }
+    nav button.active { background:#5f0fff; }
+    section { padding:2rem; max-width:1200px; margin:auto; }
+    h2 { border-bottom:2px solid #5f0fff; padding-bottom:0.5rem; margin-bottom:1rem; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; }
+    .gallery img { width:100%; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s; }
+    .gallery img:hover { transform: scale(1.05); box-shadow:0 0 20px #5f0fff; }
+    .bio, .concept { margin-bottom:2rem; line-height:1.6; }
+    footer { padding:1rem; text-align:center; background:#111; color:#888; font-size:0.9rem; }
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">AK</div>
-        <div>
-          <h1>Digital Imprints — Цифровые отпечатки</h1>
-          <div class="lead">Новый русский футуризм · цифровая каллиграфия · антропоморфные проявления</div>
-        </div>
-      </div>
-      <nav>
-        <a onclick="switchLang('ru')">RU</a>
-        <a onclick="switchLang('en')">EN</a>
-      </nav>
-    </header>
 
-    <div lang="ru">
-      <section class="hero" id="about">
-        <div class="card intro">
-          <h2>Digital Imprints — визуализация потока сознания</h2>
-          <p>Серия двухмерных работ, созданных в Paint 3D с использованием пера на тачпаде и мыши. Линия — живой жест, порождающий антропоморфные проявления, отражающие цифровое сознание. Работы исследуют пересечение техники, каллиграфии и медитативной практики наблюдения без наблюдателя, расширяя идеи Нового русского футуризма.</p>
-        </div>
-        <aside class="card">
-          <h3>Ключевые идеи</h3>
-          <ul style="color:var(--muted);line-height:1.6;margin:8px 0 0 18px">
-            <li>настоящее — архаика</li>
-            <li>воображение — технология</li>
-            <li>искусство — машина времени</li>
-            <li>будущее уже случилось</li>
-          </ul>
-        </aside>
-      </section>
+<header>
+    <h1>Digital Imprints</h1>
+    <nav>
+        <button id="ruBtn" class="active">RU</button>
+        <button id="enBtn">EN</button>
+    </nav>
+</header>
 
-      <section class="manifest">
-        <h3>Манифест Нового Русского Футуризма</h3>
-        <p><strong>Мы — из будущего.</strong> Настоящее видится нам как древность. Ваши смартфоны — иконы. Города — пещеры. Мы говорим языком будущего о вашем вчера.</p>
-      </section>
+<section id="content">
 
-      <section class="gallery" id="gallery">
-        <!-- вставляйте изображения сюда -->
-        "+Array.from({length:50}, (_,i)=>`<div class="thumb"><img src="img/thumb${String(i+1).padStart(2,'0')}.jpg" alt="Digital Imprint ${i+1}"></div>`).join('')+"
-      </section>
+<!-- Русская версия -->
+<div id="ruContent">
+    <h2>Биография</h2>
+    <div class="bio">
+        Алексей Кушнаренко — художник, композитор, философ, куратор и переводчик, один из основателей движения «Новый русский футуризм». С 1980-х годов участвует в российских и международных культурных проектах, живёт и работает в Санкт-Петербурге.
     </div>
 
-    <div lang="en">
-      <section class="hero" id="about">
-        <div class="card intro">
-          <h2>Digital Imprints — visualizing consciousness flow</h2>
-          <p>Series of 2D works created in Paint 3D using stylus on touchpad and mouse. The line is a living gesture giving rise to anthropomorphic manifestations tracing digital consciousness. These works explore the intersection of technique, calligraphy, and meditative practice, extending the ideas of the New Russian Futurism.</p>
-        </div>
-        <aside class="card">
-          <h3>Key Concepts</h3>
-          <ul style="color:var(--muted);line-height:1.6;margin:8px 0 0 18px">
-            <li>present — archaic</li>
-            <li>imagination — technology</li>
-            <li>art — time machine</li>
-            <li>the future has already happened</li>
-          </ul>
-        </aside>
-      </section>
-
-      <section class="manifest">
-        <h3>Manifest of the New Russian Futurism</h3>
-        <p><strong>We are from the future.</strong> We see the present as ancient. Your smartphones — icons. Your cities — caves. We speak from the future to your yesterday.</p>
-      </section>
-
-      <section class="gallery" id="gallery">
-        <!-- вставляйте изображения сюда -->
-        "+Array.from({length:50}, (_,i)=>`<div class="thumb"><img src="img/thumb${String(i+1).padStart(2,'0')}.jpg" alt="Digital Imprint ${i+1}"></div>`).join('')+"
-      </section>
+    <h2>Концепция движения</h2>
+    <div class="concept">
+        Новый русский футуризм — способ видеть настоящее глазами будущего. Настоящее — уже архаика, а мы существуем в точке, где все сегодняшние вещи видны как музейные экспонаты, как история будущего.<br>
+        Мы пишем не о будущем, а так, как будто оно уже наступило. Будущее уже случилось.
     </div>
 
-    <footer>
-      <p>Alexey Kushnarenko — info@example.com · Saint Petersburg · © Digital Imprints Collection</p>
-    </footer>
-  </div>
+    <h2>Галерея цифровых проявлений</h2>
+    <div class="gallery">
+        <!-- Слоты для 50 изображений -->
+        <img src="img/thumb01.jpg" alt="Digital Imprint 01">
+        <img src="img/thumb02.jpg" alt="Digital Imprint 02">
+        <img src="img/thumb03.jpg" alt="Digital Imprint 03">
+        <img src="img/thumb04.jpg" alt="Digital Imprint 04">
+        <img src="img/thumb05.jpg" alt="Digital Imprint 05">
+        <img src="img/thumb06.jpg" alt="Digital Imprint 06">
+        <img src="img/thumb07.jpg" alt="Digital Imprint 07">
+        <img src="img/thumb08.jpg" alt="Digital Imprint 08">
+        <img src="img/thumb09.jpg" alt="Digital Imprint 09">
+        <img src="img/thumb10.jpg" alt="Digital Imprint 10">
+        <img src="img/thumb11.jpg" alt="Digital Imprint 11">
+        <img src="img/thumb12.jpg" alt="Digital Imprint 12">
+        <img src="img/thumb13.jpg" alt="Digital Imprint 13">
+        <img src="img/thumb14.jpg" alt="Digital Imprint 14">
+        <img src="img/thumb15.jpg" alt="Digital Imprint 15">
+        <img src="img/thumb16.jpg" alt="Digital Imprint 16">
+        <img src="img/thumb17.jpg" alt="Digital Imprint 17">
+        <img src="img/thumb18.jpg" alt="Digital Imprint 18">
+        <img src="img/thumb19.jpg" alt="Digital Imprint 19">
+        <img src="img/thumb20.jpg" alt="Digital Imprint 20">
+        <img src="img/thumb21.jpg" alt="Digital Imprint 21">
+        <img src="img/thumb22.jpg" alt="Digital Imprint 22">
+        <img src="img/thumb23.jpg" alt="Digital Imprint 23">
+        <img src="img/thumb24.jpg" alt="Digital Imprint 24">
+        <img src="img/thumb25.jpg" alt="Digital Imprint 25">
+        <img src="img/thumb26.jpg" alt="Digital Imprint 26">
+        <img src="img/thumb27.jpg" alt="Digital Imprint 27">
+        <img src="img/thumb28.jpg" alt="Digital Imprint 28">
+        <img src="img/thumb29.jpg" alt="Digital Imprint 29">
+        <img src="img/thumb30.jpg" alt="Digital Imprint 30">
+        <img src="img/thumb31.jpg" alt="Digital Imprint 31">
+        <img src="img/thumb32.jpg" alt="Digital Imprint 32">
+        <img src="img/thumb33.jpg" alt="Digital Imprint 33">
+        <img src="img/thumb34.jpg" alt="Digital Imprint 34">
+        <img src="img/thumb35.jpg" alt="Digital Imprint 35">
+        <img src="img/thumb36.jpg" alt="Digital Imprint 36">
+        <img src="img/thumb37.jpg" alt="Digital Imprint 37">
+        <img src="img/thumb38.jpg" alt="Digital Imprint 38">
+        <img src="img/thumb39.jpg" alt="Digital Imprint 39">
+        <img src="img/thumb40.jpg" alt="Digital Imprint 40">
+        <img src="img/thumb41.jpg" alt="Digital Imprint 41">
+        <img src="img/thumb42.jpg" alt="Digital Imprint 42">
+        <img src="img/thumb43.jpg" alt="Digital Imprint 43">
+        <img src="img/thumb44.jpg" alt="Digital Imprint 44">
+        <img src="img/thumb45.jpg" alt="Digital Imprint 45">
+        <img src="img/thumb46.jpg" alt="Digital Imprint 46">
+        <img src="img/thumb47.jpg" alt="Digital Imprint 47">
+        <img src="img/thumb48.jpg" alt="Digital Imprint 48">
+        <img src="img/thumb49.jpg" alt="Digital Imprint 49">
+        <img src="img/thumb50.jpg" alt="Digital Imprint 50">
+    </div>
+</div>
 
-  <script>
-    function switchLang(lang){
-      document.querySelectorAll('[lang=ru]')[0].style.display = (lang==='ru') ? 'block' : 'none';
-      document.querySelectorAll('[lang=en]')[0].style.display = (lang==='en') ? 'block' : 'none';
-    }
-  </script>
+<!-- Английская версия -->
+<div id="enContent" style="display:none;">
+    <h2>Biography</h2>
+    <div class="bio">
+        Alexey Kushnarenko — artist, composer, philosopher, curator, and translator, one of the founders of the "New Russian Futurism" movement. Since the 1980s, he has participated in Russian and international cultural projects, living and working in Saint Petersburg.
+    </div>
+
+    <h2>Concept</h2>
+    <div class="concept">
+        New Russian Futurism is a way to see the present through the eyes of the future. The present is already archaic, and we exist in a point where all today's things look like museum exhibits, like the history of the future.<br>
+        We do not create works about the future, but as if it has already happened. The future has already occurred.
+    </div>
+
+    <h2>Gallery of Digital Imprints</h2>
+    <div class="gallery">
+        <!-- Те же слоты изображений -->
+        <img src="img/thumb01.jpg" alt="Digital Imprint 01">
+        <img src="img/thumb02.jpg" alt="Digital Imprint 02">
+        <!-- … до thumb50.jpg -->
+    </div>
+</div>
+
+</section>
+
+<footer>
+    &copy; 2025 Alexey Kushnarenko — New Russian Futurism
+</footer>
+
+<script>
+const ruBtn = document.getElementById('ruBtn');
+const enBtn = document.getElementById('enBtn');
+const ruContent = document.getElementById('ruContent');
+const enContent = document.getElementById('enContent');
+
+ruBtn.addEventListener('click', () => {
+    ruContent.style.display = 'block';
+    enContent.style.display = 'none';
+    ruBtn.classList.add('active');
+    enBtn.classList.remove('active');
+});
+
+enBtn.addEventListener('click', () => {
+    ruContent.style.display = 'none';
+    enContent.style.display = 'block';
+    ruBtn.classList.remove('active');
+    enBtn.classList.add('active');
+});
+</script>
+
 </body>
 </html>
