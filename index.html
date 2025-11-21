@@ -3,151 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Imprints — Алексей Кушнаренко</title>
+<title>Digital Imprints — Alexey Kushnarenko</title>
 <style>
-    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin:0; padding:0; background:#0b0b0b; color:#f0f0f0; }
-    header { padding:2rem; text-align:center; background:#111; }
-    header h1 { margin:0; font-size:2.5rem; }
-    nav { margin-top:1rem; }
-    nav button { margin:0 0.5rem; padding:0.5rem 1rem; cursor:pointer; background:#222; color:#fff; border:none; border-radius:4px; }
-    nav button.active { background:#5f0fff; }
-    section { padding:2rem; max-width:1200px; margin:auto; }
-    h2 { border-bottom:2px solid #5f0fff; padding-bottom:0.5rem; margin-bottom:1rem; }
-    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; }
-    .gallery img { width:100%; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s; }
-    .gallery img:hover { transform: scale(1.05); box-shadow:0 0 20px #5f0fff; }
-    .bio, .concept { margin-bottom:2rem; line-height:1.6; }
-    footer { padding:1rem; text-align:center; background:#111; color:#888; font-size:0.9rem; }
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #111; color: #eee; }
+  header { padding: 20px; text-align: center; background: #222; }
+  h1, h2 { margin: 10px 0; }
+  nav { text-align: center; margin: 10px 0; }
+  nav button { padding: 10px 20px; margin: 0 5px; cursor: pointer; background: #333; color: #eee; border: none; }
+  nav button:hover { background: #555; }
+  section { padding: 20px; max-width: 1200px; margin: auto; }
+  .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .gallery-item { width: 200px; height: 200px; overflow: hidden; background: #222; display: flex; align-items: center; justify-content: center; }
+  .gallery-item img { max-width: 100%; max-height: 100%; }
+  p { line-height: 1.5em; }
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Digital Imprints</h1>
-    <nav>
-        <button id="ruBtn" class="active">RU</button>
-        <button id="enBtn">EN</button>
-    </nav>
+  <h1>Digital Imprints</h1>
+  <p>Alexey Kushnarenko — New Russian Futurism</p>
+  <nav>
+    <button onclick="showLang('ru')">RU</button>
+    <button onclick="showLang('en')">EN</button>
+  </nav>
 </header>
 
-<section id="content">
+<!-- Russian version -->
+<section id="ru">
+  <h2>Алексей Кушнаренко — Биография и Концепция</h2>
+  <p>Алексей Кушнаренко — художник, композитор, философ, куратор и переводчик, один из основателей движения «Новый русский футуризм». С 1980-х годов участвует в российских и международных культурных проектах. Живёт и работает в Санкт-Петербурге.</p>
+  <p>Новый русский футуризм — это способ видеть настоящее глазами будущего. Это не предсказание и не утопия, а художественный метод, в котором сегодняшняя реальность воспринимается как архаика, как музей будущего.</p>
+  <p>Мы не спрашиваем «каким будет ИИ через 50 лет», а «каким нам кажется 2025-й год из точки зрения 2075-го».</p>
 
-<!-- Русская версия -->
-<div id="ruContent">
-    <h2>Биография</h2>
-    <div class="bio">
-        Алексей Кушнаренко — художник, композитор, философ, куратор и переводчик, один из основателей движения «Новый русский футуризм». С 1980-х годов участвует в российских и международных культурных проектах, живёт и работает в Санкт-Петербурге.
-    </div>
+  <h2>Манифест Нового Русского Футуризма</h2>
+  <p>Мы — из будущего. Мы — не «потом», мы — теперь. Мы смотрим на настоящее как на древность. Ваши смартфоны — ваши иконы. Ваши города — ваши пещеры. Ваши мысли — ваши цепи.</p>
+  <p>Мы объявляем настоящее архаикой. Воображение — технологией. Искусство — машиной времени. Будущее уже случилось.</p>
 
-    <h2>Концепция движения</h2>
-    <div class="concept">
-        Новый русский футуризм — способ видеть настоящее глазами будущего. Настоящее — уже архаика, а мы существуем в точке, где все сегодняшние вещи видны как музейные экспонаты, как история будущего.<br>
-        Мы пишем не о будущем, а так, как будто оно уже наступило. Будущее уже случилось.
-    </div>
-
-    <h2>Галерея цифровых проявлений</h2>
-    <div class="gallery">
-        <!-- Слоты для 50 изображений -->
-        <img src="img/thumb01.jpg" alt="Digital Imprint 01">
-        <img src="img/thumb02.jpg" alt="Digital Imprint 02">
-        <img src="img/thumb03.jpg" alt="Digital Imprint 03">
-        <img src="img/thumb04.jpg" alt="Digital Imprint 04">
-        <img src="img/thumb05.jpg" alt="Digital Imprint 05">
-        <img src="img/thumb06.jpg" alt="Digital Imprint 06">
-        <img src="img/thumb07.jpg" alt="Digital Imprint 07">
-        <img src="img/thumb08.jpg" alt="Digital Imprint 08">
-        <img src="img/thumb09.jpg" alt="Digital Imprint 09">
-        <img src="img/thumb10.jpg" alt="Digital Imprint 10">
-        <img src="img/thumb11.jpg" alt="Digital Imprint 11">
-        <img src="img/thumb12.jpg" alt="Digital Imprint 12">
-        <img src="img/thumb13.jpg" alt="Digital Imprint 13">
-        <img src="img/thumb14.jpg" alt="Digital Imprint 14">
-        <img src="img/thumb15.jpg" alt="Digital Imprint 15">
-        <img src="img/thumb16.jpg" alt="Digital Imprint 16">
-        <img src="img/thumb17.jpg" alt="Digital Imprint 17">
-        <img src="img/thumb18.jpg" alt="Digital Imprint 18">
-        <img src="img/thumb19.jpg" alt="Digital Imprint 19">
-        <img src="img/thumb20.jpg" alt="Digital Imprint 20">
-        <img src="img/thumb21.jpg" alt="Digital Imprint 21">
-        <img src="img/thumb22.jpg" alt="Digital Imprint 22">
-        <img src="img/thumb23.jpg" alt="Digital Imprint 23">
-        <img src="img/thumb24.jpg" alt="Digital Imprint 24">
-        <img src="img/thumb25.jpg" alt="Digital Imprint 25">
-        <img src="img/thumb26.jpg" alt="Digital Imprint 26">
-        <img src="img/thumb27.jpg" alt="Digital Imprint 27">
-        <img src="img/thumb28.jpg" alt="Digital Imprint 28">
-        <img src="img/thumb29.jpg" alt="Digital Imprint 29">
-        <img src="img/thumb30.jpg" alt="Digital Imprint 30">
-        <img src="img/thumb31.jpg" alt="Digital Imprint 31">
-        <img src="img/thumb32.jpg" alt="Digital Imprint 32">
-        <img src="img/thumb33.jpg" alt="Digital Imprint 33">
-        <img src="img/thumb34.jpg" alt="Digital Imprint 34">
-        <img src="img/thumb35.jpg" alt="Digital Imprint 35">
-        <img src="img/thumb36.jpg" alt="Digital Imprint 36">
-        <img src="img/thumb37.jpg" alt="Digital Imprint 37">
-        <img src="img/thumb38.jpg" alt="Digital Imprint 38">
-        <img src="img/thumb39.jpg" alt="Digital Imprint 39">
-        <img src="img/thumb40.jpg" alt="Digital Imprint 40">
-        <img src="img/thumb41.jpg" alt="Digital Imprint 41">
-        <img src="img/thumb42.jpg" alt="Digital Imprint 42">
-        <img src="img/thumb43.jpg" alt="Digital Imprint 43">
-        <img src="img/thumb44.jpg" alt="Digital Imprint 44">
-        <img src="img/thumb45.jpg" alt="Digital Imprint 45">
-        <img src="img/thumb46.jpg" alt="Digital Imprint 46">
-        <img src="img/thumb47.jpg" alt="Digital Imprint 47">
-        <img src="img/thumb48.jpg" alt="Digital Imprint 48">
-        <img src="img/thumb49.jpg" alt="Digital Imprint 49">
-        <img src="img/thumb50.jpg" alt="Digital Imprint 50">
-    </div>
-</div>
-
-<!-- Английская версия -->
-<div id="enContent" style="display:none;">
-    <h2>Biography</h2>
-    <div class="bio">
-        Alexey Kushnarenko — artist, composer, philosopher, curator, and translator, one of the founders of the "New Russian Futurism" movement. Since the 1980s, he has participated in Russian and international cultural projects, living and working in Saint Petersburg.
-    </div>
-
-    <h2>Concept</h2>
-    <div class="concept">
-        New Russian Futurism is a way to see the present through the eyes of the future. The present is already archaic, and we exist in a point where all today's things look like museum exhibits, like the history of the future.<br>
-        We do not create works about the future, but as if it has already happened. The future has already occurred.
-    </div>
-
-    <h2>Gallery of Digital Imprints</h2>
-    <div class="gallery">
-        <!-- Те же слоты изображений -->
-        <img src="img/thumb01.jpg" alt="Digital Imprint 01">
-        <img src="img/thumb02.jpg" alt="Digital Imprint 02">
-        <!-- … до thumb50.jpg -->
-    </div>
-</div>
-
+  <h2>Галерея Цифровых Проявлений</h2>
+  <div class="gallery">
+    <!-- 50 слотов для изображений -->
+    <!-- Повторяем для thumb01.jpg … thumb50.jpg -->
+    <!-- Используем placeholder.png, если изображения ещё нет -->
+    <!-- Пример для 50 слотов -->
+    <!-- Первый блок -->
+    <div class="gallery-item"><img src="img/thumb01.jpg" alt="Цифровое проявление 1" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb02.jpg" alt="Цифровое проявление 2" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb03.jpg" alt="Цифровое проявление 3" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb04.jpg" alt="Цифровое проявление 4" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb05.jpg" alt="Цифровое проявление 5" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb06.jpg" alt="Цифровое проявление 6" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb07.jpg" alt="Цифровое проявление 7" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb08.jpg" alt="Цифровое проявление 8" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb09.jpg" alt="Цифровое проявление 9" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb10.jpg" alt="Цифровое проявление 10" onerror="this.src='img/placeholder.png';"></div>
+    <!-- … до thumb50.jpg -->
+  </div>
 </section>
 
-<footer>
-    &copy; 2025 Alexey Kushnarenko — New Russian Futurism
-</footer>
+<!-- English version -->
+<section id="en" style="display:none;">
+  <h2>Alexey Kushnarenko — Biography & Concept</h2>
+  <p>Alexey Kushnarenko is an artist, composer, philosopher, curator, and translator, co-founder of the movement "New Russian Futurism". Since the 1980s, he has participated in Russian and international cultural projects. He lives and works in Saint Petersburg.</p>
+  <p>New Russian Futurism is a method of seeing the present through the eyes of the future. It is not a prediction or utopia, but an artistic method in which today’s reality is perceived as archaic, like a museum of the future.</p>
+  <p>We do not ask "what will AI be in 50 years?" but "how does 2025 look from the perspective of 2075?"</p>
+
+  <h2>Manifesto of New Russian Futurism</h2>
+  <p>We are from the future. We are not "later", we are now. We see the present as antiquity. Your smartphones are your icons. Your cities are your caves. Your thoughts are your chains.</p>
+  <p>We declare the present archaic. We declare imagination as technology. We declare art a time machine. The future has already happened.</p>
+
+  <h2>Digital Imprints Gallery</h2>
+  <div class="gallery">
+    <!-- 50 slots for English gallery -->
+    <div class="gallery-item"><img src="img/thumb01.jpg" alt="Digital Imprint 1" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb02.jpg" alt="Digital Imprint 2" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb03.jpg" alt="Digital Imprint 3" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb04.jpg" alt="Digital Imprint 4" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb05.jpg" alt="Digital Imprint 5" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb06.jpg" alt="Digital Imprint 6" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb07.jpg" alt="Digital Imprint 7" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb08.jpg" alt="Digital Imprint 8" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb09.jpg" alt="Digital Imprint 9" onerror="this.src='img/placeholder.png';"></div>
+    <div class="gallery-item"><img src="img/thumb10.jpg" alt="Digital Imprint 10" onerror="this.src='img/placeholder.png';"></div>
+    <!-- … до thumb50.jpg -->
+  </div>
+</section>
 
 <script>
-const ruBtn = document.getElementById('ruBtn');
-const enBtn = document.getElementById('enBtn');
-const ruContent = document.getElementById('ruContent');
-const enContent = document.getElementById('enContent');
-
-ruBtn.addEventListener('click', () => {
-    ruContent.style.display = 'block';
-    enContent.style.display = 'none';
-    ruBtn.classList.add('active');
-    enBtn.classList.remove('active');
-});
-
-enBtn.addEventListener('click', () => {
-    ruContent.style.display = 'none';
-    enContent.style.display = 'block';
-    ruBtn.classList.remove('active');
-    enBtn.classList.add('active');
-});
+  function showLang(lang) {
+    document.getElementById('ru').style.display = (lang === 'ru') ? 'block' : 'none';
+    document.getElementById('en').style.display = (lang === 'en') ? 'block' : 'none';
+  }
 </script>
 
 </body>
