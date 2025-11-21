@@ -1,4 +1,54 @@
-<img src="img/thumb01.jpg" alt="Digital Imprint 01">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Imprints — Алексей Кушнаренко</title>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin:0; padding:0; background:#0b0b0b; color:#f0f0f0; }
+    header { padding:2rem; text-align:center; background:#111; }
+    header h1 { margin:0; font-size:2.5rem; }
+    nav { margin-top:1rem; }
+    nav button { margin:0 0.5rem; padding:0.5rem 1rem; cursor:pointer; background:#222; color:#fff; border:none; border-radius:4px; }
+    nav button.active { background:#5f0fff; }
+    section { padding:2rem; max-width:1200px; margin:auto; }
+    h2 { border-bottom:2px solid #5f0fff; padding-bottom:0.5rem; margin-bottom:1rem; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; }
+    .gallery img { width:100%; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s; }
+    .gallery img:hover { transform: scale(1.05); box-shadow:0 0 20px #5f0fff; }
+    .bio, .concept { margin-bottom:2rem; line-height:1.6; }
+    footer { padding:1rem; text-align:center; background:#111; color:#888; font-size:0.9rem; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Digital Imprints</h1>
+    <nav>
+        <button id="ruBtn" class="active">RU</button>
+        <button id="enBtn">EN</button>
+    </nav>
+</header>
+
+<section id="content">
+
+<!-- Русская версия -->
+<div id="ruContent">
+    <h2>Биография</h2>
+    <div class="bio">
+        Алексей Кушнаренко — художник, композитор, философ, куратор и переводчик, один из основателей движения «Новый русский футуризм». С 1980-х годов участвует в российских и международных культурных проектах, живёт и работает в Санкт-Петербурге.
+    </div>
+
+    <h2>Концепция движения</h2>
+    <div class="concept">
+        Новый русский футуризм — способ видеть настоящее глазами будущего. Настоящее — уже архаика, а мы существуем в точке, где все сегодняшние вещи видны как музейные экспонаты, как история будущего.<br>
+        Мы пишем не о будущем, а так, как будто оно уже наступило. Будущее уже случилось.
+    </div>
+
+    <h2>Галерея цифровых проявлений</h2>
+    <div class="gallery">
+        <!-- Слоты для 50 изображений -->
+        <img src="img/thumb01.jpg" alt="Digital Imprint 01">
         <img src="img/thumb02.jpg" alt="Digital Imprint 02">
         <img src="img/thumb03.jpg" alt="Digital Imprint 03">
         <img src="img/thumb04.jpg" alt="Digital Imprint 04">
@@ -48,3 +98,57 @@
         <img src="img/thumb48.jpg" alt="Digital Imprint 48">
         <img src="img/thumb49.jpg" alt="Digital Imprint 49">
         <img src="img/thumb50.jpg" alt="Digital Imprint 50">
+    </div>
+</div>
+
+<!-- Английская версия -->
+<div id="enContent" style="display:none;">
+    <h2>Biography</h2>
+    <div class="bio">
+        Alexey Kushnarenko — artist, composer, philosopher, curator, and translator, one of the founders of the "New Russian Futurism" movement. Since the 1980s, he has participated in Russian and international cultural projects, living and working in Saint Petersburg.
+    </div>
+
+    <h2>Concept</h2>
+    <div class="concept">
+        New Russian Futurism is a way to see the present through the eyes of the future. The present is already archaic, and we exist in a point where all today's things look like museum exhibits, like the history of the future.<br>
+        We do not create works about the future, but as if it has already happened. The future has already occurred.
+    </div>
+
+    <h2>Gallery of Digital Imprints</h2>
+    <div class="gallery">
+        <!-- Те же слоты изображений -->
+        <img src="img/thumb01.jpg" alt="Digital Imprint 01">
+        <img src="img/thumb02.jpg" alt="Digital Imprint 02">
+        <!-- … до thumb50.jpg -->
+    </div>
+</div>
+
+</section>
+
+<footer>
+    &copy; 2025 Alexey Kushnarenko — New Russian Futurism
+</footer>
+
+<script>
+const ruBtn = document.getElementById('ruBtn');
+const enBtn = document.getElementById('enBtn');
+const ruContent = document.getElementById('ruContent');
+const enContent = document.getElementById('enContent');
+
+ruBtn.addEventListener('click', () => {
+    ruContent.style.display = 'block';
+    enContent.style.display = 'none';
+    ruBtn.classList.add('active');
+    enBtn.classList.remove('active');
+});
+
+enBtn.addEventListener('click', () => {
+    ruContent.style.display = 'none';
+    enContent.style.display = 'block';
+    ruBtn.classList.remove('active');
+    enBtn.classList.add('active');
+});
+</script>
+
+</body>
+</html>
