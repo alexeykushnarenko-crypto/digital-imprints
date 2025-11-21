@@ -1,22 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Цифровые отпечатки бытия</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Imprints | Цифровые отпечатки</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <nav>
-        <a href="index-eng.html">ENG</a>
-    </nav>
+  <div class="top-bar">
+    <button id="toggle-lang">ENG</button>
     <h1>Digital Imprints</h1>
     <h2>Цифровые отпечатки бытия</h2>
+  </div>
 </header>
 
-<main class="gallery" id="gallery">
-    <!-- JS автоматически заполнит галерею -->
+<main>
+  <!-- Галерея -->
+  <section id="gallery">
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+
+  <!-- Информация о коллекции -->
+  <section class="collection-info">
+    <div class="container">
+      <!-- Русская версия -->
+      <div id="text-ru">
+        <h2>Алексей Кушнаренко</h2>
+        <p><strong>Художник, композитор, философ, куратор и переводчик, один из основателей движения «Новый русский футуризм».</strong> С 1980-х годов участвует в российских и международных культурных проектах, живёт и работает в Санкт-Петербурге.</p>
+        <p>Как художник и теоретик, он развивает идею видения настоящего глазами будущего, делая акцент на честности, личной теме и методе «возвращения из будущего».</p>
+        <p><strong>Лозунг движения:</strong> «Художник, открой в себе Будущее!»</p>
+
+        <h3>Коллекция «Цифровые отпечатки»</h3>
+        <p>Исследование того, как цифровая среда становится продолжением жеста, а жест — способом исчезнуть. Работы создаются в Paint 3D одним непрерывным движением, будто рука пишет не на экране, а в пространстве между намерением и его отсутствием.</p>
+        <p>Техника основана на гибриде каллиграфии и компьютерного рисунка. Пальцевое движение по тачпаду — минимальный акт, где тело уступает место траектории. Линия становится событием, которое случается само, а художник — наблюдателем её рождения.</p>
+        <p>Свободные движения собираются в антропоморфные сущности — персонажей, напоминающих цифровых духов, наброски будущих форм жизни, эхо человека в постчеловеческом контуре. Цифровое пространство проявляет собственных обитателей.</p>
+        <p>В основе коллекции — идея отсутствия автора. Здесь рисует не «я», а процесс. Сознание оставляет след не в виде образа, а в виде жеста. Каждая работа — цифровой отпечаток сознания, момент, когда линия одновременно появляется и исчезает.</p>
+
+        <h4>Медитативные практики атман–анатман</h4>
+        <ul>
+          <li>форма рождается, но не присваивается автором;</li>
+          <li>движение совершается, но не закрепляет “делающего”;</li>
+          <li>образ всплывает из пустоты, но сохраняет тепло человеческого жеста.</li>
+        </ul>
+
+        <h4>Эстетика</h4>
+        <p>Соединяет теле-ественность жеста, цифровую материю и футуристическую интонацию. Работы — фрагменты возможного будущего, где линии научились думать, а человек научился не вмешиваться.</p>
+
+        <h4>Поэтика и позиционирование</h4>
+        <p>Серия — не изображения будущего. Это фрагменты будущего, которые уже случились и просвечивают в настоящем. Работы можно рассматривать как:</p>
+        <ul>
+          <li>следы будущего письма,</li>
+          <li>цифровые тотемы,</li>
+          <li>каллиграфические сущности,</li>
+          <li>энергетические узоры,</li>
+          <li>призраки грядущих форм,</li>
+          <li>цифровые проявления — в первичном, живом смысле.</li>
+        </ul>
+      </div>
+
+      <!-- Английская версия -->
+      <div id="text-eng" style="display:none;">
+        <h2>Alexey Kushnarenko</h2>
+        <p><strong>Artist, composer, philosopher, curator, and translator, one of the founders of the “New Russian Futurism” movement.</strong> Since the 1980s, he has participated in Russian and international cultural projects, living and working in St. Petersburg.</p>
+        <p>As an artist and theorist, he develops the idea of seeing the present through the eyes of the future, emphasizing honesty, personal themes, and the method of “returning from the future.”</p>
+        <p><strong>Movement slogan:</strong> “Artist, open the Future within yourself!”</p>
+
+        <h3>The “Digital Imprints” Collection</h3>
+        <p>This collection explores how the digital environment becomes an extension of gesture, and gesture — a way to disappear. Works are created in Paint 3D in a single continuous motion, as if the hand writes not on a screen, but in the space between intention and its absence.</p>
+        <p>The technique is a hybrid of calligraphy and computer drawing. Finger movements on the touchpad are minimal acts where the body yields to trajectory. The line becomes an event that happens by itself, and the artist observes its own birth.</p>
+        <p>These free movements assemble into anthropomorphic entities — characters reminiscent of digital spirits, sketches of future life forms, echoes of humans in a post-human outline. The digital space manifests its own inhabitants.</p>
+        <p>The collection is based on the idea of the absence of the author. It is not “I” who draws, but the process. Consciousness leaves traces not as images, but as gestures. Each work is a digital imprint of consciousness, a moment where the line both appears and disappears.</p>
+
+        <h4>Meditative Practices of Atman–Anatman</h4>
+        <ul>
+          <li>The form is born but not claimed by the author;</li>
+          <li>The movement occurs but does not fix the “doer”;</li>
+          <li>The image emerges from emptiness but retains the warmth of the human gesture.</li>
+        </ul>
+
+        <h4>Aesthetics</h4>
+        <p>Combines the corporeality of gesture, digital matter, and a futuristic intonation. These works are fragments of a possible future where lines have learned to think, and humans have learned not to interfere.</p>
+
+        <h4>Poetics and Positioning</h4>
+        <p>This series is not images of the future. They are fragments of the future that have already occurred and shine through the present. The works can be seen as:</p>
+        <ul>
+          <li>traces of future writing,</li>
+          <li>digital totems,</li>
+          <li>calligraphic entities,</li>
+          <li>energy patterns,</li>
+          <li>ghosts of coming forms,</li>
+          <li>digital manifestations — in the primary, living sense of the word.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
 
 <script src="script.js"></script>

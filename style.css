@@ -1,115 +1,63 @@
-/* ==============================
-   Основные стили
-   ============================== */
 body {
-    font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #111;
-    color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #eee;
 }
 
-/* ==============================
-   Языковой переключатель
-   ============================== */
-.language-switcher {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-}
-.language-switcher a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 15px;
-}
-.language-switcher a:hover {
-    text-decoration: underline;
-}
-
-/* ==============================
-   Заголовки страницы
-   ============================== */
 header {
-    text-align: center;
-    padding: 40px 20px 20px 20px;
+  background: #222;
+  padding: 1em;
+  text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  margin: 0;
+  font-size: 2em;
 }
 
-header p {
-    margin: 5px 0 0 0;
-    font-size: 1.2em;
-    color: #ccc;
+header h2 {
+  margin: 0;
+  font-weight: normal;
+  color: #aaa;
 }
 
-/* ==============================
-   Галерея
-   ============================== */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.top-bar button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding: 0.5em 1em;
+  background: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 1em;
 }
 
 .gallery-item {
-    overflow: hidden;
-    border-radius: 8px;
-    position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #333;
+  object-fit: cover;
 }
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s, filter 0.3s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+.collection-info {
+  background: #1a1a1a;
+  padding: 2em 1em;
 }
 
-.gallery-item img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-    cursor: pointer;
+.collection-info h2, .collection-info h3, .collection-info h4 {
+  color: #f0f0f0;
 }
 
-/* ==============================
-   Подписи к миниатюрам
-   ============================== */
-.gallery-item figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    font-size: 0.9em;
-    padding: 5px 10px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.gallery-item:hover figcaption {
-    opacity: 1;
-}
-
-/* ==============================
-   Адаптивность
-   ============================== */
-@media screen and (max-width: 600px) {
-    header h1 {
-        font-size: 2em;
-    }
-    header p {
-        font-size: 1em;
-    }
+.collection-info ul {
+  padding-left: 1.2em;
 }
